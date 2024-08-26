@@ -1,20 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import './Home.css'
 import Header from '../../Components/Header/Header'
 import Card from '../../Components/Card/Card'
+import { CartContext } from '../../Context/CartContext'
 
 export default function Home() {
-    const ali = {
-        "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-        "price": 109.95,
-        "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-        "rating": 3.9,
-
-    }
+    const context = useContext(CartContext)
 
     return (
         <>
             <Header />
-            <Card {...ali} />
+            <h3 className='home-title'>همه محصولات</h3>
+            <div className='home-cards'>
+                {
+                    context.shop.map((product) => {
+                        return <Card key={product.id} {...product} />
+                    })
+                }
+            </div>
         </>
     )
 }

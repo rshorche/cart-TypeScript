@@ -1,0 +1,148 @@
+.cart-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem auto 3rem;
+  max-width: 90rem;
+  padding: 0 1rem;
+}
+
+.cart-topbar h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5rem;
+}
+
+.cart-topbar button {
+  display: flex;
+  align-items: center;
+  background-color: #f44336;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+}
+
+.cart-topbar button .delete-icon {
+  margin-left: 0.5rem;
+}
+
+.cart-topbar button:hover {
+  background-color: #d32f2f;
+}
+
+.card-index {
+  max-width: 90rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 16rem;
+}
+
+.card img {
+  width: 100%;
+  height: 10rem;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.card main{
+  width: 100%;
+}
+
+.cart-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cart-price-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.cart-price {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.cart-rating {
+  display: flex;
+  align-items: center;
+}
+
+.cart-rating .star {
+  color: gold;
+  margin-left: 2px;
+}
+
+.product-count {
+  width: 100%;
+  padding: 8px 12px;
+  background-color: lightgray;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0.3rem 0;
+  text-align: center;
+}
+
+.product-count:hover {
+  background-color: gray;
+}
+
+.cart-remove {
+  width: 100%;
+  padding: 8px 12px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cart-remove:hover {
+  background-color: darkred;
+}
+
+.emptyBasket {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.emptyBasket p {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.emptyBasket img {
+  width: 300px;
+  margin: 0 auto;
+  display: block;
+}
