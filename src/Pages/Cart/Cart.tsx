@@ -7,8 +7,30 @@ import { CartContext } from "../../Context/CartContext";
 export default function Cart() {
   const context = useContext(CartContext);
 
+  const removeAllProduct = () => {
+    swal({
+      title: "حذف همه محصولات",
+      icon: 'succes',
+      buttons: ['خیر', 'بله']
+    }).then((res) => {
+      if (res) {
+        context.removeAll()
+      }
+
+    })
+  };
+
   const removeProduct = (id: number) => {
-    context.removeProduct(id);
+    swal({
+      title: 'آیا میخواهید این محصول حذف شود؟',
+      icon: 'succes',
+      buttons: ['خیر', 'بله']
+    }).then((res) => {
+      if (res) {
+        context.removeProduct(id);
+      }
+
+    })
   };
 
   return (
@@ -19,7 +41,7 @@ export default function Cart() {
           <>
             <div className="cart-topbar">
               <h3>محصولات داخل سبد خرید:</h3>
-              <button onClick={() => context.removeAll()}>
+              <button onClick={() => removeAllProduct()}>
                 حذف همه محصولات <AiOutlineDelete className="delete-icon" />
               </button>
             </div>
